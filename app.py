@@ -118,6 +118,36 @@ st.markdown(f"""
               border-radius: 0 0 8px 8px; font-size: 14px; color: {INK}; min-height: 290px; }}
   button[data-baseweb="tab"][aria-selected="true"] {{ color: {BURGUNDY}; }}
   [data-baseweb="tab-highlight"] {{ background-color: {BURGUNDY}; }}
+  
+/* PERBAIKAN KONTRAS TULISAN SIDEBAR */
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #F4F0E8 !important;
+}
+
+/* TULISAN DI KOTAK INFORMASI */
+[data-testid="stSidebar"] [data-testid="stAlert"] p {
+    color: #17243B !important;
+}
+
+/* TANGGAL PERIODE PENGAMATAN */
+[data-testid="stSidebar"] [data-testid="stDateInput"] input {
+    color: #17243B !important;
+    -webkit-text-fill-color: #17243B !important;
+    background-color: #F4F0E8 !important;
+    font-weight: 500 !important;
+}
+
+/* LABEL PERIODE PENGAMATAN */
+[data-testid="stSidebar"] [data-testid="stDateInput"] label {
+    color: #E8C47A !important;
+    font-weight: 600 !important;
+}
+
+/* IKON KALENDER */
+[data-testid="stSidebar"] [data-testid="stDateInput"] svg {
+    color: #17243B !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
